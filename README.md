@@ -3,16 +3,8 @@
 **Aberto:** 06/11/2025 (no futuro, chique)
 **Vencimento:** 13/11/2025 (uma semana pra fazer tudo isso? Boa sorte.)
 
----
 
-## O Grande Objetivo
-
-A meta aqui é "integrar sistemas multiplataformas". Na prática, isso significa fazer o Node.js conversar com arquivos de texto e, se os deuses da programação permitirem, com um banco de dados PostgreSQL de verdade.
-
----
-
-
-### 1 — O "Alô, Mundo!" dos Arquivos
+### 1 — Criando e Lendo Arquivos
 
 **O que fazer:** Criar um arquivo `mensagem.txt`, escrever "Persistência de dados em Node.js" e depois ler em voz alta no terminal.
 **Nível de dificuldade:** Tão fácil que você vai desconfiar.
@@ -21,7 +13,7 @@ A meta aqui é "integrar sistemas multiplataformas". Na prática, isso significa
 node exercicio1.js
 ```
 
-### 2 — O Mesmo, Mas com "Async/Await" (pra parecer moderno)
+### 2 — Versão Assíncrona com Promises
 
 **O que fazer:** A mesma coisa do exercício 1, mas agora de forma assíncrona. Porque esperar é chique.
 **Como rodar:**
@@ -29,7 +21,7 @@ node exercicio1.js
 node exercicio2.js
 ```
 
-### 3 — Nosso "Banco de Dados" de Pobre: `db.json`
+### 3 —  JSON como “Banco de Dados”
 
 **O que fazer:** Temos um `db.json` com dois usuários. Sua missão, caso decida aceitar, é adicionar a "Ana" nesse rolê, salvar e mostrar que você conseguiu.
 **Como rodar:**
@@ -37,7 +29,7 @@ node exercicio2.js
 node exercicio3.js
 ```
 
-### 4 — O CRUD de Mentirinha
+### 4 — CRUD com JSON
 
 **O que fazer:** Criar, Ler, Atualizar e Deletar usuários do nosso `db.json`. Basicamente, brincar de Deus com um arquivo de texto.
 **Nível de dificuldade:** Exige um pouco de organização. E fé.
@@ -47,16 +39,16 @@ node exercicio3.js
 node exercicio4.js
 ```
 
-### 5 — Falando com Gente Grande: PostgreSQL
+### 5 — Conexão com PostgreSQL
 
 **O que fazer:** Conectar no PostgreSQL de verdade. Crie a tabela `funcionarios` e faça um `SELECT *` pra ver se ela existe mesmo (ou se você sonhou).
 ```bash
 node exercicio5.js
 ```
 
-### 6 — Contratando (e Espiando) Funcionários
+### 6 — Inserindo Dados no PostgreSQL
 
-**O que fazer:** Inserir um novo coitado... digo, funcionário, na sua tabela e depois listar todo mundo pra garantir que ele não fugiu.
+**O que fazer:** Crie um script que insira um novo funcionário na tabela funcionarios e depois consulte todos os registros.
 **Como rodar:**
 ```bash
 node exercicio6.js
