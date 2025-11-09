@@ -1,5 +1,9 @@
 const fs = require('fs');
-const data = new Date();
-const log = `Novo acesso em ${data.toString()}\n`;
-fs.appendFileSync('log.txt', log);
-console.log('Log adicionado com sucesso!');
+
+async function executar() {
+  await fs.writeFile('mensagem.txt', 'Persistência de dados em Node.js');
+  const texto = await fs.readFile('mensagem.txt', 'utf8');
+  console.log(texto);
+}
+
+executar();
