@@ -36,3 +36,18 @@ async function listarUsuarios() {
     const db = await readDB();
     console.log('Lista de usuarios:', db.usuarios);
 }
+
+//Exemplo de uso: node Ex4.js atualizar 2 Carlos
+async function atualizarUsuario(id, novoNome) {
+    const db = await readDB();
+    const usuario = db.usuarios.find(u => u.id === id);
+
+    if (usuario) {
+        usuario.nome = novoNome;
+        await writeDB(db);
+        console.log('Usuário atualizado:', usuario);
+    } else {
+        console.log('Usuário não encontrado.');
+    }
+}
+
